@@ -16,6 +16,8 @@ void main() {
 }
 
 class DicePage extends StatelessWidget {
+  int leftDiceNo = 3;
+  int rightDiceNo = 4;
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -27,7 +29,7 @@ class DicePage extends StatelessWidget {
                 print('1 got rolled');
               },
               child: Image.asset(
-                'images/dice1.png',
+                'images/dice$rightDiceNo.png',
               ),
             ),
           ),
@@ -36,11 +38,24 @@ class DicePage extends StatelessWidget {
               onPressed: () {
                 print('2 got pressed');
               },
-              child: Image.asset('images/dice1.png'),
+              child: Image.asset('images/dice$leftDiceNo.png'),
             ),
           ),
         ],
       ),
+    );
+  }
+}
+class  extends StatefulWidget {
+  @override
+  _State createState() => _State();
+}
+
+class _State extends State<> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      
     );
   }
 }
